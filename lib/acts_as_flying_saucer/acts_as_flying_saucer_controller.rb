@@ -60,6 +60,7 @@ module ActsAsFlyingSaucer
 				# saving the file
 				tmp_dir = ActsAsFlyingSaucer::Config.options[:tmp_path]
         html = TidyFFI::Tidy.new(html,:output_xhtml=>true,:numeric_entities=>true).clean if tidy_clean
+        html = html.gsub('â€™', '’')
 				html_digest = Digest::MD5.hexdigest(html)
 				input_file =File.join(File.expand_path("#{tmp_dir}"),"#{html_digest}.html")
 
