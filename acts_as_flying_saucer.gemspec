@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{XHTML to PDF using Flying Saucer java library}
 	s.add_dependency "nailgun"
   s.add_dependency "tidy_ffi"
+	s.add_dependency "charlock_holmes"
   s.rubyforge_project = "acts_as_flying_saucer"
 
   s.files         = `git ls-files`.split("\n")
